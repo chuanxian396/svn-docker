@@ -1,0 +1,1 @@
+docker build -t chuanxian396/svn-server:3.12 .

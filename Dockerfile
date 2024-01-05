@@ -1,5 +1,5 @@
 # Alpine Linux with s6 service management
-FROM smebberson/alpine-base:3.2.0
+FROM chuanxian396/alpine-apache:3.12
 
 	# Install Apache2 and other stuff needed to access svn via WebDav
 	# Install svn
@@ -16,7 +16,7 @@ RUN apk add --no-cache apache2 apache2-utils apache2-webdav mod_dav_svn &&\
 	mkdir /home/svn/ &&\
 	mkdir /etc/subversion &&\
 	touch /etc/subversion/passwd &&\
-    wget --no-check-certificate https://github.com/mfreiholz/iF.SVNAdmin/archive/stable-1.6.2.zip &&\
+    wget --no-check-certificate https://dl.ghpig.top/https://github.com/mfreiholz/iF.SVNAdmin/archive/stable-1.6.2.zip &&\
 	unzip stable-1.6.2.zip -d /opt &&\
 	rm stable-1.6.2.zip &&\
 	mv /opt/iF.SVNAdmin-stable-1.6.2 /opt/svnadmin &&\
